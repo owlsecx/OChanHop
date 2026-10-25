@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-OChanHop is a security and privacy tool from the OwlSec suite.
+OChanHop uses a Wi-Fi site survey you have already collected (BSSID, SSID, channel, RSSI, width) to plan a clean channel layout. It scores how busy and congested each channel is, recommends the best channel per band and builds a scan dwell plan. It works offline and never transmits on a radio.
 
 ---
 
 ## ✨ Features
 
-- Standalone executable, no Python installation needed.
+- Site-survey analyzer with a per-channel interference and utilisation score
+- Best-channel recommendation for 2.4, 5 and 6 GHz plus a scan dwell plan
+- Channel maps for 2.4 / 5 / 6 GHz, including DFS and 6 GHz PSC channels
+- Regulatory-domain reference and compliance checks (FCC, ETSI, MIC and more)
+- Findings graded A+ to F with MITRE ATT&CK mapping
+- Reports in TXT / JSON / Markdown / CSV / SARIF
 
 ---
 
@@ -38,8 +43,13 @@ OChanHop is a security and privacy tool from the OwlSec suite.
 ## 🚀 Usage
 
 ```bash
-./OChanHop
+./OChanHop                                   # interactive menu
+./OChanHop --analyze survey.csv --domain EU
+./OChanHop --channels
+./OChanHop --demo
 ```
+
+Run `./OChanHop --help` for the full list of options.
 
 ---
 
